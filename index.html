@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página con Barras Superior e Izquierda y Contenido Externo</title>
+
+ 
+
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #barra-superior, #barra-izquierda {
+            position: absolute;
+            padding: 10px;
+            color: #fff;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        #barra-superior {
+            top: 0;
+            left: 0;
+            width: 98%;
+            background-color: #000;
+            height: 140px; /* Ajusta la altura según tus necesidades */
+            justify-content: center; /* Centra horizontalmente los elementos en la barra superior */
+        }
+
+        #barra-izquierda {
+            top: 60px; /* Ajusta según la altura de la barra superior */
+            left: 0;
+            width: 50px; /* Ajusta el ancho según tus necesidades */
+            background-color: #000;
+            height: calc(100% - 60px); /* Ajusta la altura según la altura de la barra superior */
+        }
+
+        iframe {
+            width: 100%; /* Ajusta según el ancho de la barra izquierda */
+            height: calc(100% - 100px); /* Ajusta según la altura de la barra superior */
+            border: none;
+            margin: 100px 0 0 0; /* Ajusta según la posición de las barras superior e izquierda */
+        }
+
+        #logo {
+            width: 250px; /* Ajusta el ancho del logo según tus necesidades */
+            height: auto; /* Mantiene la proporción original del logo */
+            margin-right: 20px; /* Ajusta según el espacio que deseas entre el logo y el texto en la barra superior */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra superior -->
+    <div id="barra-superior">
+        <img id="logo" src="https://lavilla26.bet/img/src/shared/img/logo.webp" alt="Logo">
+        
+        <!-- <p>Este es un cuadro en la parte superior de la página.</p> -->
+    </div>
+
+    <!-- Barra izquierda -->
+    <div id="barra-izquierda">
+        <!-- <h2>Barra Izquierda</h2> -->
+        <!-- <p>Este es un cuadro en la parte izquierda de la página.</p> -->
+    </div>
+
+    <!-- Iframe con el contenido externo -->
+    <iframe src="https://doradobet.com/deportes" frameborder="0"></iframe>
+
+</body>
+
+</html>
